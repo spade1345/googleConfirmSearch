@@ -6,32 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Confirmation</title>
     <style>
+        *{
+            font-family: Lexend, Arial, sans-serif;
+        }
         body {
-            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            /* Dark Mode Flip: Background becomes dark grey */
             background-color: #121212;
             color: #e0e0e0;
-            /* Default text color becomes light grey */
             text-align: center;
         }
 
         .container {
-            /* Dark Mode Flip: Container becomes dark */
             background-color: #1e1e1e;
             padding: 30px 40px;
             border-radius: 8px;
-            /* Shadow adjusted for dark background */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             max-width: 500px;
         }
 
         h1 {
-            /* Dark Mode Flip: Header text becomes light */
             color: #f0f0f0;
             font-size: 1.5em;
         }
@@ -39,14 +36,12 @@
         .query-display {
             font-size: 1.2em;
             font-weight: bold;
-            /* Keep the bright Google Blue */
             color: #4285f4;
             margin: 20px 0;
             word-wrap: break-word;
         }
 
         .button-yes {
-            /* Button background stays the same blue */
             background-color: #4285f4;
             color: white;
             padding: 10px 20px;
@@ -67,7 +62,7 @@
 
 <body>
     <div class="container">
-        <h1>🔍 Do you really want to search Google for:</h1>
+        <h1>🔍 <i>Really</i> search Google for</h1>
         <p class="query-display" id="searchQuery"></p>
         <button class="button-yes" id="confirmButton">Yes, Search Google</button>
     </div>
