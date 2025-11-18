@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,40 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            /* Dark Mode Flip: Background becomes dark grey */
+            background-color: #121212;
+            color: #e0e0e0;
+            /* Default text color becomes light grey */
             text-align: center;
         }
+
         .container {
-            background-color: white;
+            /* Dark Mode Flip: Container becomes dark */
+            background-color: #1e1e1e;
             padding: 30px 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Shadow adjusted for dark background */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             max-width: 500px;
         }
+
         h1 {
-            color: #333;
+            /* Dark Mode Flip: Header text becomes light */
+            color: #f0f0f0;
             font-size: 1.5em;
         }
+
         .query-display {
             font-size: 1.2em;
             font-weight: bold;
-            color: #4285f4; /* Google Blue */
+            /* Keep the bright Google Blue */
+            color: #4285f4;
             margin: 20px 0;
             word-wrap: break-word;
         }
+
         .button-yes {
+            /* Button background stays the same blue */
             background-color: #4285f4;
             color: white;
             padding: 10px 20px;
@@ -45,11 +58,13 @@
             display: inline-block;
             transition: background-color 0.3s;
         }
+
         .button-yes:hover {
             background-color: #357ae8;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>🔍 Do you really want to search Google for:</h1>
@@ -71,7 +86,7 @@
         const query = getUrlParameter('q');
         const queryDisplay = document.getElementById('searchQuery');
         const confirmButton = document.getElementById('confirmButton');
-        
+
         // 2. Display the query
         if (query) {
             queryDisplay.textContent = '"' + query + '"';
@@ -82,7 +97,7 @@
         }
 
         // 3. Set up the confirmation action
-        confirmButton.onclick = function() {
+        confirmButton.onclick = function () {
             if (query) {
                 // Construct the Google search URL
                 const googleSearchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query);
@@ -92,4 +107,5 @@
         };
     </script>
 </body>
+
 </html>
